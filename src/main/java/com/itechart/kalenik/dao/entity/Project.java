@@ -3,8 +3,10 @@ package com.itechart.kalenik.dao.entity;
 
 import lombok.Getter;
 import lombok.Setter;
+import org.hibernate.annotations.Type;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.util.Date;
 import java.util.List;
 
@@ -16,7 +18,12 @@ public class Project {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+
+    @NotNull
+    @Column(nullable = false)
     private String name;
+
+    @Type(type="text")
     private String description;
     @Column(name = "creation_date")
     private Date creationDate;

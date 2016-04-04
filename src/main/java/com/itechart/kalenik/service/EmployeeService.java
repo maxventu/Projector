@@ -1,13 +1,12 @@
-package com.itechart.kalenik.dao.service;
+package com.itechart.kalenik.service;
 
 
 import com.itechart.kalenik.dao.entity.Employee;
 import com.itechart.kalenik.dao.repository.EmployeeRepository;
-import com.itechart.kalenik.dao.utils.Const;
+import com.itechart.kalenik.utils.Const;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 

@@ -1,4 +1,4 @@
-package com.itechart.kalenik.dao.config;
+package com.itechart.kalenik.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;

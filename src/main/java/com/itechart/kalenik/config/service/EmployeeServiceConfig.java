@@ -1,7 +1,7 @@
-package com.itechart.kalenik.dao.config.service;
+package com.itechart.kalenik.config.service;
 
-import com.itechart.kalenik.dao.config.PersistenceJPAConfig;
-import com.itechart.kalenik.dao.service.EmployeeService;
+import com.itechart.kalenik.config.PersistenceJPAConfig;
+import com.itechart.kalenik.service.EmployeeService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

@@ -1,10 +1,10 @@
 package com.itechart.kalenik;
 
-import com.itechart.kalenik.dao.config.PersistenceJPAConfig;
-import com.itechart.kalenik.dao.config.PropertiesConfig;
-import com.itechart.kalenik.dao.config.service.EmployeeServiceConfig;
+import com.itechart.kalenik.config.PersistenceJPAConfig;
+import com.itechart.kalenik.config.PropertiesConfig;
+import com.itechart.kalenik.config.service.EmployeeServiceConfig;
 import com.itechart.kalenik.dao.entity.Employee;
-import com.itechart.kalenik.dao.service.EmployeeService;
+import com.itechart.kalenik.service.EmployeeService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
@@ -14,13 +14,12 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.ContextHierarchy;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import org.springframework.test.context.support.AnnotationConfigContextLoader;
 import org.springframework.transaction.annotation.Transactional;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextHierarchy({
-        @ContextConfiguration(classes = PersistenceJPAConfig.class),
         @ContextConfiguration(classes = PropertiesConfig.class),
+        @ContextConfiguration(classes = PersistenceJPAConfig.class),
         @ContextConfiguration(classes = EmployeeServiceConfig.class)
 })
 
@@ -38,6 +37,7 @@ public class HibernateTest{
         employee.setUsername("theBestUser");
         employee.setName("Саша");
         employee.setSurname("Белый");
+        employee.setEmail("sasha@test.ru");
         employee.setPassword((new BCryptPasswordEncoder(4)).encode("1234567"));
         logger.debug("New employee username: {}, name: {}, surname: {}, password: {}",
                 employee.getUsername(),

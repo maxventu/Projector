@@ -1,4 +1,4 @@
-package com.itechart.kalenik.dao.utils;
+package com.itechart.kalenik.utils;
 
 public class Const {
 

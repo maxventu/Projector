@@ -16,12 +16,10 @@ public class SubtaskLock {
     private Integer id;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "subtask_locking_id",
-            referencedColumnName = "id")
+    @JoinColumn(name = "subtask_locking_id")
     private Subtask lockingSubtask;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "subtask_locked_by_id",
-            referencedColumnName = "id")
+    @JoinColumn(name = "subtask_locked_by_id")
     private Subtask lockedBySubtask;
 }

@@ -4,6 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.util.List;
 
 @Entity
@@ -14,8 +15,11 @@ public class SubtaskType {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+
+    @NotNull
+    @Column(nullable = false)
     private String name;
 
-    @OneToMany(fetch = FetchType.LAZY,mappedBy = "subtask_type_id")
+    @OneToMany(fetch = FetchType.LAZY,mappedBy = "type")
     private List<Subtask> subtasks;
 }
