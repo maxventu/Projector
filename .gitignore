@@ -1,0 +1,13 @@
+logs
+target
+/.idea
+/lib
+/.idea_modules
+/.classpath
+/.project
+/.settings
+/RUNNING_PID
+*.iml
+.idea
+node_modules
+bower_components
