@@ -13,8 +13,9 @@
         <module>security-core</module>
         <module>security-hibernate-support</module>
         <module>security-services</module>
-        <module>Projector</module>
+        <module>projector-core</module>
         <module>business-services</module>
+        <module>projector-web</module>
     </modules>
     <properties>
         <spring.version>4.2.5.RELEASE</spring.version>

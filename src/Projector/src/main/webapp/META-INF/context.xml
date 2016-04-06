@@ -1,4 +1,0 @@
-<Resource name="jdbc/SecuritySampleDB" auth="Container" type="javax.sql.DataSource"
-          maxTotal="100" maxIdle="30" maxWaitMillis="10000"
-          username="sec_user" password="sec_user" driverClassName="com.mysql.jdbc.Driver"
-          url="jdbc:mysql://localhost:3306/security_sample"/>
