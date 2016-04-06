@@ -13,7 +13,7 @@ import javax.validation.constraints.NotNull;
 public class EmployeeRoleInTeam {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Long id;
 
     @NotNull
     @Column(nullable = false)

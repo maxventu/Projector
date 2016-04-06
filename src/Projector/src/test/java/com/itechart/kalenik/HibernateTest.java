@@ -14,6 +14,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.ContextHierarchy;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.test.context.web.WebAppConfiguration;
 import org.springframework.transaction.annotation.Transactional;
 
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -22,7 +23,6 @@ import org.springframework.transaction.annotation.Transactional;
         @ContextConfiguration(classes = PersistenceJPAConfig.class),
         @ContextConfiguration(classes = EmployeeServiceConfig.class)
 })
-
 @Transactional
 public class HibernateTest{
 
@@ -63,7 +63,7 @@ public class HibernateTest{
                 savedEmployee.getSurname(),
                 savedEmployee.getPassword());
 
-        Integer id = savedEmployee.getId();
+        Long id = savedEmployee.getId();
         String deletingResult = employeeService.deleteEmployee(id);
         logger.debug("deleting result: {}",deletingResult);
     }

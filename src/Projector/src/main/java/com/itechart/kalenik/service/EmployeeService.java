@@ -37,7 +37,7 @@ public class EmployeeService {
         return deleteEmployee(employee);
     }
 
-    public String deleteEmployee(Integer id){
+    public String deleteEmployee(Long id){
         Employee employee = employeeRepository.findById(id);
         return deleteEmployee(employee);
     }
